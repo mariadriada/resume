@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const webpack = require ('webpack')
 
 module.exports = {
   mode: 'spa',
@@ -11,10 +12,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description }      
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Orbitron|Ubuntu|Indie+Flower|Raleway|Libre+Baskerville|Tajawal'}
     ]
   },
 
@@ -33,6 +35,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    
+    /*new webpack.optimize.CommonsChunkPlugin({
+      name: 'vue-awesome',
+    }),*/
   ],
 
   /*
@@ -40,7 +46,9 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-sass-resources-loader',
+    ['~/assets/mixins.scss', '~/assets/general-class.scss']]
   ],
   /*
   ** Axios module configuration
@@ -66,6 +74,32 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+
+    /*optimization: {
+      splitChunks: {
+       cacheGroups: {
+         // match the entry point and spit out the file named here
+         vendor: {
+           chunks: 'initial',
+           name: 'vue-awesome',
+           test: 'vue-awesome',
+           filename: '~plugins/vue-awesome.js',
+           enforce: true,
+         },
+       },
+      },
+     },*/
+
+   /* extend (config, { isServer }) {
+      if (isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist:[/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^vue-awesome/]
+          })
+        ]
+      }
+    }*/
+
   }
 }
