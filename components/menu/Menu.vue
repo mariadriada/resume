@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Opt from '~/components/menu/option.vue'
+import Opt from '~/components/menu/Option.vue'
 
 export default {
   components: {
