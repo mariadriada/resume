@@ -23,6 +23,14 @@ export default {
       list: [
         {
           id: 1,
+          company: 'QVision Technologies - TCS (TATA Consultancy Services)',
+          rol: 'Analyst and Development',
+          date: 'June 2018 - October 2018',
+          observation:
+            'Development of ARM project for the access to Metro of Medellin System Transportation'
+        },
+        {
+          id: 2,
           company: 'Forettos Pizza',
           rol: 'Family enterpreneurship',
           date: 'Actually',
@@ -30,7 +38,7 @@ export default {
             'Create mark of gourmet pre-cooked pizzas with Canvas Business Model.'
         },
         {
-          id: 2,
+          id: 3,
           company: 'Corantioquia',
           rol: 'Business analyst',
           date: 'June 2015 - March 2017',
@@ -38,7 +46,7 @@ export default {
             'Process analysis and and front-end development - Workteam leader.'
         },
         {
-          id: 3,
+          id: 4,
           company: 'Colombia Aprende',
           rol: 'Front-end developer',
           date: 'March 2015 - June 2015',
@@ -46,21 +54,21 @@ export default {
             'Agreement betwen Ministerio de Educación Nacional and Universidad Pontificia Bolivariana-UPB.'
         },
         {
-          id: 4,
+          id: 5,
           company: 'Corantioquia',
           rol: 'Software analyst',
           date: 'January 2014 - December 2014',
           observation: 'Structure custom software of client-side.'
         },
         {
-          id: 5,
+          id: 6,
           company: 'Master2000 SAS',
           rol: 'Software developer',
           date: 'August 2012 - January 2014',
           observation: 'Leadership of software workteam.'
         },
         {
-          id: 6,
+          id: 7,
           company: 'Powers Solution LTDA',
           rol: 'Software developer',
           date: 'July 2010 - Juny 2012',
@@ -68,7 +76,7 @@ export default {
             'Design and develpment of telemetry software project with arm9 platform.'
         },
         {
-          id: 7,
+          id: 8,
           company: 'Pascual Bravo Institución Universitaria',
           rol: "Technology's auxiliar",
           date: 'July 2008 - Juny 2010',

@@ -78,18 +78,9 @@ export default {
           doc: 'http://lesscss.org/'
         },
         {
-          id: 5,
-          name: 'ECMAScript5',
-          description: 'Javascript.',
-          level: 'high',
-          img: '/img/skills/javascript.png',
-          alt: 'Javascript',
-          doc: 'https://www.ecma-international.org/ecma-262/5.1/'
-        },
-        {
           id: 6,
-          name: 'ECMAScript2015',
-          description: 'ES6 and ES7.',
+          name: 'JS',
+          description: 'Javascript - ES6 and ES7.',
           level: 'high',
           img: '/img/skills/es6.png',
           alt: 'ECMAScript6',
