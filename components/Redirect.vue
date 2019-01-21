@@ -49,7 +49,6 @@ export default {
 @media screen and (min-width: 200rem) {
   .article-redirect {
     font-size: 100%;
-    border: 1px solid red;
   }
 }
 
