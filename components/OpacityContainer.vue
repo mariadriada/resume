@@ -5,17 +5,13 @@
 </template>
 
 <script>
-
 export default {
   props: ['text']
 }
-
 </script>
 
 <style lang="scss">
-
 .opacity-container {
-
   @include flexbox;
   @include align-items(center);
 
@@ -26,18 +22,16 @@ export default {
 
   p {
     width: inherit;
-    color: #FFEB3B;
+    color: #fafafa;
     font-size: 1.7em;
     text-align: center;
     padding: 2em;
   }
 
-  @mixin opacitfix($opacity: .3 , $bgcolor:#FFEB3B ) {
-
+  @mixin opacitfix($opacity: 0.1, $bgcolor: #ffeb3b) {
     @if $opacity > 0 {
-
       ::before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         top: 0;
@@ -46,19 +40,18 @@ export default {
         right: 0;
         background-color: $bgcolor;
         opacity: $opacity;
-        filter: alpha(opacity = $opacity * 1000 );
-        khtml-opacity:  $opacity;
+        filter: alpha(opacity = $opacity * 1000);
+        khtml-opacity: $opacity;
         -moz-opacity: $opacity;
       }
     }
-
   }
 
   &.default {
     @include opacitfix();
 
     p {
-      color: #FAFAFA;
+      color: #fafafa;
       font-weight: 600;
       letter-spacing: 1px;
     }
@@ -70,20 +63,20 @@ export default {
     }
   }
 
-  &.purple{
+  &.purple {
     margin: 2em 0 2em 0;
-    background-color: #9C27B0;
+    background-color: #424242;
   }
 
   &.blue {
-    background-color: #4FC3F7;
+    background-color: #4fc3f7;
   }
 
   &.purple-text {
-     p {
-      color: #9C27B0;
+    p {
+      color: #424242;
       text-align: left;
-      padding: .5em;
+      padding: 0.5em;
       line-height: 1.5em;
       padding: 0 0 2em 0;
     }
@@ -91,9 +84,9 @@ export default {
 
   &.purple-text-serie {
     p {
-      color: #9C27B0;
+      color: #424242;
       text-align: left;
-      padding: .5em;
+      padding: 0.5em;
       line-height: 1.5em;
       padding: 2em 0 1em 0;
     }
@@ -103,7 +96,5 @@ export default {
     display: block;
     margin: 0 auto;
   }
-
 }
-
 </style>

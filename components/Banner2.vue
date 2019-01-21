@@ -126,7 +126,7 @@ export default {
 
       h2 {
         margin-left: 30%;
-        color: #ffff00;
+        color: #fafafa;
         font-weight: 200;
         font-style: oblique;
         font-size: 1.1em;

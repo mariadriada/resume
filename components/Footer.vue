@@ -1,85 +1,70 @@
 <template>
   <footer>
-
     <!--<nav class="menu"> <basic-menu/> </nav>-->
-
     <div>
-
       <section class="author">
-        <p class="text">
-          {{ text }}
-        </p>
-        <p class="cc"> {{ cc }} </p>
+        <p class="text">{{ text }}</p>
+        <p class="cc">{{ cc }}</p>
       </section>
 
       <aside id="img">
         <figure>
-          <img :src="`${ img }`" :alt="`${ alt }`" />
+          <img :src="`${ img }`" :alt="`${ alt }`">
         </figure>
       </aside>
-
     </div>
-
   </footer>
 </template>
 
 <script>
-
 import BasicMenu from '~/components/menu/BasicMenu.vue'
 
 export default {
-
   components: {
     BasicMenu
   },
-  data () {
+  data() {
     return {
-      text:'Design and development by',
+      text: 'Design and development by',
       cc: '©MariaDriada',
       img: '/img/firma.png',
       alt: 'Maria Eugenia Giraldo Forero'
     }
   }
-
 }
-
 </script>
 
 
 <style lang="scss">
-
 footer {
-
   //background-color: #FFEB3B;
-  background-color: #0277BD;
+  background-color: #0277bd;
   min-height: 25vh;
   margin: 0 auto;
   @include inherit-width;
 
   div {
-    @include flexbox
-    @include justify-content(center);
+    @include flexbox @include justify-content(center);
     min-height: inherit;
     height: auto;
 
     .author {
-
       @include flexbox;
       @include align-items(left);
       @include flex-direction(column);
       @include justify-content(center);
 
-      width:50%;
+      width: 50%;
       font-family: 'Indie Flower', cursive;
       font-size: inherit;
       //padding-left: 2em;
       //color: #9C27B0;
-      color: #F5F5F5;
+      color: #f5f5f5;
       height: auto;
       //padding-top: 1.5em;
       padding: 1.6em 0 0 2em;
 
-      .text{
+      .text {
         font-size: 1.3em;
       }
 
@@ -89,22 +74,21 @@ footer {
     }
 
     #img {
-
       @include flexbox;
       @include align-items(flex-end);
       @include justify-content(flex-end);
 
       width: 50%;
-      height:inherit;
-      font-size:inherit;
-      padding: 0 2em .5em 0;
+      height: inherit;
+      font-size: inherit;
+      padding: 0 2em 0.5em 0;
 
       figure {
         width: 17em;
 
         img {
           width: inherit;
-          border-bottom: 1px solid #F5F5F5;
+          border-bottom: 1px solid #f5f5f5;
         }
       }
     }
@@ -113,10 +97,9 @@ footer {
   .menu {
     width: 100%;
     height: auto;
-    background-color: #FFEB3B;
+    background-color: #ffeb3b;
     padding-right: 2em;
   }
-
 }
 
 //Media queries
@@ -130,24 +113,24 @@ footer {
 
       .author {
         width: 100%;
-        display:block;
+        display: block;
         padding: 0;
         margin: 0 auto;
-        text-align:center;
+        text-align: center;
       }
 
       #img {
         width: 100%;
         padding: 1em 0 1em 0;
 
-        figure{
+        figure {
           width: 100%;
 
           img {
             width: 40%;
-            display:block;
+            display: block;
             margin: 0 auto;
-            padding-top:2em;
+            padding-top: 2em;
           }
         }
       }
@@ -192,10 +175,9 @@ footer {
 
 @media screen and (max-width: 20rem) {
   footer {
-  .menu {
+    .menu {
       //padding: 1em 0 2em 0;
     }
   }
 }
-
 </style>

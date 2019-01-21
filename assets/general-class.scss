@@ -10,8 +10,12 @@
   animation-iteration-count: 1;
   background-color: #4FC3F7;
 
-  h2 {
-   // color: #9C27B0;
+  #fixed2 {
+    -webkit-animation: swingY .3s ease-in-out;
+    animation: swingY .3s ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    background-color: #4FC3F7;
   }
 }
 
@@ -21,4 +25,100 @@
 
 .visible {
   visibility: visible;
+}
+
+.button {
+  color: #212121;
+  cursor: pointer;
+}
+
+.button-up {
+  position: fixed;
+  top: 80vh;
+  right: 2%;
+  z-index: 5;
+}
+
+a:visited {
+  color: #212121;
+}
+a:line {
+  color: #212121;
+}
+
+.button-bars {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 5;
+  color: #212121;
+  visibility: hidden;
+}
+
+
+.datac {
+  @include inherit-width;
+
+  min-height: 60vh;
+  height: auto;
+  max-height: auto;
+  background-color: #FAFAFA;
+  position: relative;
+  z-index: 3;
+
+ /* nav {
+    @include inherit-width;
+  }*/
+}
+
+.headerpage {
+  @include inherit-width;
+  height: 30vh;  
+}
+
+.datapage {
+  height: 45vh;
+}
+
+.footerpage {
+  @include inherit-width; 
+}
+
+
+
+//Media queries
+@media screen and (max-width: 48rem) {
+  .pcontainer {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .pcontainer {
+      //top: 20vh;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  .pcontainer {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .pcontainer {
+    font-size: 160%;
+  }
+}
+
+@media screen and (min-width: 150rem) {
+  .pcontainer {
+    font-size: 210%;
+  }
+}
+
+@media screen and (min-width: 200rem) {
+  .pcontainer {
+    font-size: 280%;
+  }
 }
