@@ -17,8 +17,8 @@ export default {
         { id: 1, name: 'ABOUT', to: '/about' },
         { id: 2, name: 'SKILLS', to: '/skills' },
         { id: 3, name: 'EXPERIENCE', to: '/experience' },
-        { id: 3, name: 'CODE', to: '/code' },
-        { id: 3, name: 'CONTACT', to: '/contact' },
+        { id: 4, name: 'CODE', to: '/code' },
+        { id: 5, name: 'CONTACT', to: '/contact' },
       ]
     }
   },

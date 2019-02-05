@@ -13,10 +13,18 @@
 
       <text-line :message="`${ title }`" class="budge-left" id="nav"/>
 
-      <div id="dynamic-text">
+      <div id="dynamic-text">        
         <article class="active panel" id="performance">
+
+         <redirect 
+          :title="`${ titlePortfolio }`"
+          :description="`${ description }`"
+          :link="`${ link }`"
+          :textlink="`${ textlink }`"/>
+
           <opacity-container :text="`${ text1 }`" class="purple-text-serie text-normal"/>
           <opacity-container :text="`${ text2 }`" class="purple-text text-normal"/>
+
           <text-line :message="`${ title3 }`" class="sub"/>
           <experience/>
         </article>
@@ -33,6 +41,7 @@ import OpacityContainer from '~/components/OpacityContainer.vue'
 import TextLine from '~/components/TextLine.vue'
 import FooterDiv from '~/components/Footer.vue'
 import Experience from '~/components/Experience.vue'
+import Redirect from '~/components/Redirect.vue'
 
 import Observers from '~/assets/observers.js'
 
@@ -47,18 +56,23 @@ export default {
     TextLine,
     FooterDiv,
     Experience,
-    Icon
+    Icon,
+    Redirect
   },
   data() {
     return {
       title: 'Maria´s Experience',
       title3: 'Roles:',
+      titlePortfolio: 'Portfolio',
+      description: 'You can download the portfolio do click below',
       text1: `For the last ten years I have professionally developed in the computing,
               mostly as a analyst and software develper.`,
       text2: `I characterize myself for doing best on y job and it has allowed me
               to reach a high performance on planning and leadership
               on the software development workteams.`,
       html: '',
+      link: '/doc/PortfolioMariaDriada.pdf',
+      textlink: 'Here some projects done:',
       subject: [],
       observerScroll: [],
       observerResize: []
